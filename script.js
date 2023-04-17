@@ -1,8 +1,8 @@
 //botão para gerar cores aleatórias para a paleta de cores
-const button = document.getElementById("button-random-color");
 
+const button = document.getElementById('button-random-color');
 
-function getColorArray () {
+function getColorArray() {
     const colors = document.querySelectorAll('.color');
     const colorArray = [];
 console.log(colors)
@@ -38,4 +38,19 @@ const otherColours = () => {
 }
  otherColours()
 
- 
+ //Adicione à página um quadro contendo 25 pixels
+
+ const pixelBoard = document.getElementById('pixel-board')
+
+for(let index = 0; index < 5; index ++) {
+    const linha = document.createElement('div')
+    linha.className = 'linha';
+    
+    for(let i = 0; i < 5; i ++) {
+    let pixel = document.createElement('div');
+    pixel.className = 'pixel';
+    linha.appendChild(pixel);
+ };
+  pixelBoard.appendChild(linha)
+  }
+
