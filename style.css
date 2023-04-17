@@ -1,96 +1,94 @@
 #color-palette {
-display: flex;
-
+  display: flex;
 }
 .color {
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
 }
 
 .LightPink {
-    background-color: LightPink;
+  background-color: LightPink;
 }
 .HotPink {
-    background-color: hotpink;
+  background-color: hotpink;
 }
 
 .DeepPink {
-    background-color: DeepPink;
+  background-color: DeepPink;
 }
 
-.Violet { 
-    background-color: violet;
+.Violet {
+  background-color: violet;
 }
 
-.MediumOrchid { 
-    background-color: MediumOrchid;
+.MediumOrchid {
+  background-color: MediumOrchid;
 }
 
 .MediumPurple {
-    background-color: MediumPurple;
+  background-color: MediumPurple;
 }
 
-.BlueViolet{ 
-    background-color: BlueViolet;
+.BlueViolet {
+  background-color: BlueViolet;
 }
 
-.SlateBlue { 
-    background-color: SlateBlue;
+.SlateBlue {
+  background-color: SlateBlue;
 }
 
-.DarkSlateBlue { 
-    background-color: DarkSlateBlue;
+.DarkSlateBlue {
+  background-color: DarkSlateBlue;
 }
 
 .Aqua {
-    background-color: Aqua;
+  background-color: Aqua;
 }
-.DarkTurquoise{
-    background-color:DarkTurquoise;
+.DarkTurquoise {
+  background-color: DarkTurquoise;
 }
 
 .DeepSkyBlue {
-    background-color: DeepSkyBlue;
+  background-color: DeepSkyBlue;
 }
 
-.DodgerBlue{
-    background-color: DodgerBlue;
+.DodgerBlue {
+  background-color: DodgerBlue;
 }
 
-.MediumBlue{
-    background-color: MediumBlue;
+.MediumBlue {
+  background-color: MediumBlue;
 }
 
-.MidnightBlue { 
-    background-color: MidnightBlue;
+.MidnightBlue {
+  background-color: MidnightBlue;
 }
 
 .RoyalBlue {
-    background-color: RoyalBlue;
+  background-color: RoyalBlue;
 }
 
 .black {
-    background-color: black;
+  background-color: black;
 }
 
 .button {
-    background-color: #eee;
-    display: inline-block;
-  
+  background-color: #eee;
+  display: inline-block;
 }
 
 .pixel {
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid black;
 }
 
 #pixel-board {
-    border-spacing: 1px;
+  border-spacing: 1px;
 }
 
 .linha {
-    display: flex;
+  display: flex;
 }
