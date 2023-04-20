@@ -9,17 +9,24 @@
   </head>
   <body>
     <h1 id="title">Paleta de Cores</h1>
-    <div id="color-palette">
-      <div class="color black selected"></div>
-      <div class="color"></div>
-      <div class="color"></div>
-      <div class="color"></div>
+    <div id="fundo">
+      <div id="color-palette">
+        <div class="color black selected"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+      </div>
+      <div class="button">
+        <button id="button-random-color" class="learn-more">
+          Cores aleatórias
+        </button>
+        <div class="buttonClear">
+          <button id="clear-board" class="learn-more">Limpar</button>
+        </div>
+      </div>
+      <div id="pixel-board"></div>
+      <br />
     </div>
-    <div class="button">
-      <button id="button-random-color">Cores aleatórias</button>
-    </div>
-    <div id="pixel-board"></div>
-
     <script src="script.js"></script>
   </body>
 </html>

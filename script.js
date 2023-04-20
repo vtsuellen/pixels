@@ -13,19 +13,19 @@ function getColorArray() {
 }
 
 const classes = [
-  'Violet',
-  'MediumOrchid',
-  'MediumPurple',
-  'BlueViolet',
-  'SlateBlue',
-  'DarkSlateBlue',
-  'Aqua',
-  'DarkTurquoise',
-  'DeepSkyBlue',
-  'DodgerBlue',
-  'MediumBlue',
-  'MidnightBlue',
-  'RoyalBlue',
+  'violet',
+  'mediumOrchid',
+  'mediumPurple',
+  'blueViolet',
+  'slateBlue',
+  'darkSlateBlue',
+  'aqua',
+  'darkTurquoise',
+  'deepSkyBlue',
+  'dodgerBlue',
+  'mediumBlue',
+  'midnightBlue',
+  'royalBlue',
 ];
 
 const coresAleatorias = () => {
@@ -53,6 +53,24 @@ const colors = getColorArray();
 console.log(colors);
 button.addEventListener('click', () => otherColours());
 
+// Crie uma função que permita preencher um pixel do quadro com a cor selecionada na paleta de cores
+
+const colorPixel = (event) => {
+  let selected = '';
+  const cor = document.getElementsByClassName('color');
+  for (let i = 0; i < cor.length; i += 1) {
+    if (cor[i].className.includes('selected')) {
+      selected = cor[i].className;
+    }
+  }
+  const splitClasse = selected.split(' ');
+  const segundaPalavra = splitClasse[1];
+  const pixel = event.target;
+  console.log(pixel);
+  pixel.className = `pixel ${segundaPalavra}`;
+  console.log(segundaPalavra);
+};
+
 // Adicione à página um quadro contendo 25 pixels
 
 const pixelBoard = document.getElementById('pixel-board');
@@ -63,26 +81,32 @@ for (let index = 0; index < 5; index += 1) {
 
   for (let i = 0; i < 5; i += 1) {
     const pixel = document.createElement('div');
-    pixel.className = 'pixel';
+    pixel.className = 'pixel white';
     linha.appendChild(pixel);
+    pixel.addEventListener('click', (event) => colorPixel(event));
   }
   pixelBoard.appendChild(linha);
 }
 
 // Crie uma função para selecionar uma cor na paleta de cores
+
 const selectColor = (event) => {
-  console.log(event.target);
-  const selected = event.target;
-  const color = selected.className;
-  console.log(color);
   const divs = document.getElementsByClassName('color');
   divs[0].classList.remove('selected');
   divs[1].classList.remove('selected');
   divs[2].classList.remove('selected');
   divs[3].classList.remove('selected');
+
+  console.log(event.target);
+  const selected = event.target;
+  const color = selected.className;
+  console.log(color);
+
   selected.className = `${color} selected`;
 };
 div[0].addEventListener('click', (event) => selectColor(event));
 div[1].addEventListener('click', (event) => selectColor(event));
 div[2].addEventListener('click', (event) => selectColor(event));
 div[3].addEventListener('click', (event) => selectColor(event));
+
+// Crie um botão que retorne a cor do quadro para a cor inicial
