@@ -5,7 +5,6 @@ const button = document.getElementById('button-random-color');
 function getColorArray() {
   const colors = document.querySelectorAll('.color');
   const colorArray = [];
-  console.log(colors);
   colors.forEach((element) => {
     colorArray.push(element.classList[1]);
   });
@@ -28,6 +27,8 @@ const classes = [
   'royalBlue',
 ];
 
+// Cores aleatorias
+
 const coresAleatorias = () => {
   const randomIndex = Math.floor(Math.random() * classes.length);
   const randomColor = classes[randomIndex];
@@ -43,15 +44,33 @@ const otherColours = () => {
   const primeira = coresAleatorias();
   const segunda = coresAleatorias();
   const terceira = coresAleatorias();
+  localStorage.setItem('colorPalette', JSON.stringify(['black', primeira, segunda, terceira]));
   div[1].className = `color ${primeira}`;
   div[2].className = `color ${segunda}`;
   div[3].className = `color ${terceira}`;
 };
-otherColours();
+
+// Evento de click
 
 const colors = getColorArray();
 console.log(colors);
-button.addEventListener('click', () => otherColours());
+button.addEventListener('click', otherColours);
+
+// LocalStorage
+
+const verifica = () => {
+  if (localStorage.length !== 0) {
+    const storage = JSON.parse(localStorage.getItem('colorPalette'));
+    const colorArray = document.querySelectorAll('.color');
+    console.log(storage);
+    for (let i = 0; i < colorArray.length; i += 1) {
+      colorArray[i].className = `color ${storage[i]}`;
+    }
+  } else {
+    otherColours();
+  }
+};
+verifica();
 
 // Crie uma função que permita preencher um pixel do quadro com a cor selecionada na paleta de cores
 
