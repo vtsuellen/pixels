@@ -129,3 +129,14 @@ div[2].addEventListener('click', (event) => selectColor(event));
 div[3].addEventListener('click', (event) => selectColor(event));
 
 // Crie um botão que retorne a cor do quadro para a cor inicial
+
+const btn = document.getElementById('clear-board');
+const pixel = document.getElementsByClassName('pixel');
+
+function resetPixels() {
+  for (let i = 0; i < pixel.length; i += 1) {
+    pixel[i].className = 'pixel white';
+  }
+}
+
+btn.addEventListener('click', resetPixels);
